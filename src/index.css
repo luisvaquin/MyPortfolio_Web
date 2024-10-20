@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes wave {
+    0% {
+        transform: translateY(0);
+    }
+
+    25% {
+        transform: translateY(-13px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    75% {
+        transform: translateY(8px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.animate-wave {
+    display: inline-block;
+    animation: wave 3s ease-in-out infinite;
+}
