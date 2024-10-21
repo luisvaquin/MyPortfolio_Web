@@ -1,5 +1,5 @@
 import React from 'react';
-import SkillsBlond from './skills-blond';
+import { SkillsBlond } from './skills-blond';
 
 export const Skills = () => {
     const skills = [
