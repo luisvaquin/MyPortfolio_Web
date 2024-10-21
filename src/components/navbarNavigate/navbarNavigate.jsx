@@ -12,10 +12,11 @@ const drawerWidth = 240;
 const navItems = [
     { label: 'Home', path: '/', },
     { label: 'Sobre Mi', path: '/', },
-    { label: 'Proyectos', path: '#aboutMe', },
+    { label: 'Proyectos', path: '/proyects', },
     { label: 'Skills', path: '/' },
     { label: 'Soft Skills', path: '/', style: '' },
     { label: 'Educación', path: '/', style: '' },
+    { label: 'Referencias', path: '/', style: '' },
     { label: 'Contactame', path: '/', style: '' },
 ];
 
@@ -48,9 +49,9 @@ function NavbarNavigate(props) {
                     </ListItem>
                 ))}
             </List>
-            <div className="mx-[1rem] max-[1000px]:mt-[-4rem]" id="">
+            <div className="mx-[1rem] max-[1000px]:mt-[-1.2rem]" id="">
                 <img className="w-[auto] h-[auto] rounded-md mx-[auto] my-[auto]
-                         max-[650px]:my-[5rem] animate-jiggle" src="./iconDevSvg.svg" alt="Graphic Design" id="routeProyects" />
+                        animate-jiggle" src="./iconDevSvg.svg" alt="Graphic Design" id="routeProyects" />
             </div>
         </Box>
     );

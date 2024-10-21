@@ -31,7 +31,7 @@ const HomePage = () => {
                 } else {
                     clearInterval(intervalId);
                     timeoutId = setTimeout(() => {
-                        elemento.textContent = "‎ ";
+                        elemento.textContent = "‎";
                         efectTextTyping(elemento, text);
                     }, 700);
                 }
@@ -50,7 +50,7 @@ const HomePage = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            // Detecta si el usuario ha hecho scroll hasta el final
+            // Detecta si el usuario ha hecho scroll 
             if (window.innerHeight + window.scrollY >= 950) {
                 setShowButton(true);
             } else {
