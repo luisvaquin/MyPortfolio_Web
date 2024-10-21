@@ -11,10 +11,10 @@ const AboutMe = () => {
                         <div className="sm:p-10 p-5 bg-white sm:me-5 mb-10 rounded-md shadow-md h-[auto] ">
                             <h3 className="text-2xl mb-5 font-bold">Un poco sobre mi</h3>
                             <p className="leading-10 text-gray-500 text-2xl max-[750px]:text-[17px]">
-                                ¡Hola! Soy Luis Rodrigo Vaquin, tengo 18 años de edad y soy un apasionado
+                                ¡Hola! Soy Luis Rodrigo Vaquin, actualmente tengo 18 años de edad y soy un apasionado
                                 de la tecnología. <br /> <br /> Desde pequeño, me ha fascinado aprender
                                 constantemente y descubrir cómo funcionan las cosas.
-                                Me considero una persona autodidacta, creativa y entusiasta,
+                                Me considero un joven autodidacta, creativa y entusiasta,
                                 siempre buscando nuevas formas de aprender y mejorar día con día.
                             </p>
 

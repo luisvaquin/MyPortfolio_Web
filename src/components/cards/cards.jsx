@@ -1,4 +1,5 @@
 import React from 'react';
+import { Skills } from '../skills/skills-tecnologys';
 
 const Cards = () => {
     const cards = [
@@ -21,50 +22,54 @@ const Cards = () => {
             description: "Este proyecto es un blog web enfocado en la parte de FrontEnd, desarrollado principalmente utilizando el framework de React y Tailwind para el diseño de componentes.",
             url: "https://github.com/lvaquin2022300/blog_frontend.git"
         },
-        {
-            img: ["https://static.wixstatic.com/media/128120_009d77598a93491884579eb0502a3a0f~mv2.jpg/v1/fill/w_1000,h_667,al_c,q_85,usm_0.66_1.00_0.01/128120_009d77598a93491884579eb0502a3a0f~mv2.jpg"],
-            name: "TonysK Java-MySQL",
-            description: "Este proyecto se basa en un sistema de control de ventas de comida. La base de datos utilizada es MySQL, una DB relacional.",
-            url: "https://github.com/LuisRodrigo23/TonysKinalApllicacion.git"
-        }
+        /* {
+             img: ["https://static.wixstatic.com/media/128120_009d77598a93491884579eb0502a3a0f~mv2.jpg/v1/fill/w_1000,h_667,al_c,q_85,usm_0.66_1.00_0.01/128120_009d77598a93491884579eb0502a3a0f~mv2.jpg"],
+             name: "TonysK Java-MySQL",
+             description: "Este proyecto se basa en un sistema de control de ventas de comida. La base de datos utilizada es MySQL, una DB relacional.",
+             url: "https://github.com/LuisRodrigo23/TonysKinalApllicacion.git"
+         }*/
     ];
 
     return (
-        <div className="m-auto px-[2rem] py-8 sm:px-6 lg:px-8 max-w-8xl">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                {cards.map((card, index) => (
-                    <div key={index} className="bg-white shadow-2xl overflow-hidden rounded-lg">
-                        <img
-                            src={card.img[0]}
-                            alt={card.name}
-                            className="w-full sm:h-[20rem] object-cover object-center"
-                        />
-                        <div className="p-6 sm:p-8 lg:p-10">
-                            <h2 className="text-xl font-semibold text-gray-800 mb-2">{card.name}</h2>
-                            {/* Renderiza la descripción con dangerouslySetInnerHTML para interpretar el HTML del enlace */}
-                            <p className="text-sm text-gray-700 mb-4" dangerouslySetInnerHTML={{ __html: card.description }} />
-                            {card.url && (
-                                <div className="flex items-center">
-                                    <img
-                                        className="w-10 h-10 rounded-full mr-4"
-                                        src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-                                        alt="avatar"
-                                    />
-                                    <a
-                                        href={card.url}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="text-blue-600 hover:text-blue-800 font-medium hover:underline"
-                                    >
-                                        VER CÓDIGO
-                                    </a>
-                                </div>
-                            )}
+        <>
+            <div className="m-auto px-[2rem] py-8 sm:px-6 lg:px-8 max-w-8xl">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                    {cards.map((card, index) => (
+                        <div key={index} className="bg-white shadow-2xl overflow-hidden rounded-lg">
+                            <img
+                                src={card.img[0]}
+                                alt={card.name}
+                                className="w-full sm:h-[20rem] object-cover object-center"
+                            />
+                            <div className="p-6 sm:p-8 lg:p-10">
+                                <h2 className="text-xl font-semibold text-gray-800 mb-2">{card.name}</h2>
+                                {/* Renderiza la descripción con dangerouslySetInnerHTML para interpretar el HTML del enlace */}
+                                <p className="text-sm text-gray-700 mb-4" dangerouslySetInnerHTML={{ __html: card.description }} />
+                                {card.url && (
+                                    <div className="flex items-center">
+                                        <img
+                                            className="w-10 h-10 rounded-full mr-4"
+                                            src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
+                                            alt="avatar"
+                                        />
+                                        <a
+                                            href={card.url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-blue-600 hover:text-blue-800 font-medium hover:underline"
+                                        >
+                                            VER CÓDIGO
+                                        </a>
+                                    </div>
+                                )}
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
-        </div>
+            {/*Tecnologys */}
+            <Skills />
+        </>
     );
 };
 
