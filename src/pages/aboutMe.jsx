@@ -28,7 +28,7 @@ const AboutMe = () => {
             </section>
             <div className="relative w-full h-[50vh] bg-fixed bg-cover bg-center mt-[-2rem]"
                 style={{
-                    backgroundImage: "url('../public/imgSectionSeparation2.jpg')",
+                    backgroundImage: "url('https://images.unsplash.com/photo-1516101922849-2bf0be616449?q=80&w=2128&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
                 }}>
                 <div className="absolute inset-0 h-full w-full bg-black/40"></div>
                 <div className="relative p-[3rem] min-[1200px]:p-[12rem] text-center max-[1000px]:pt-[4.5rem] ">
