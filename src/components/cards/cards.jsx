@@ -1,5 +1,6 @@
 import React from 'react';
 import { Skills } from '../skills/skills-tecnologys';
+import CarouselCertificate from './carouselCertificate';
 
 const Cards = () => {
     const cards = [
@@ -16,12 +17,7 @@ const Cards = () => {
             description: "Para el desarrollo de esta agenda web utilicé tecnologías básicas como HTML, CSS y JavaScript.",
             url: "https://github.com/lvaquin2022300/Agenda_Web.git"
         },
-        {
-            img: ["https://www.tatvasoft.com/blog/wp-content/uploads/2022/07/Why-Use-React.jpg"],
-            name: "Blog React",
-            description: "Este proyecto es un blog web enfocado en la parte de FrontEnd, desarrollado principalmente utilizando el framework de React y Tailwind para el diseño de componentes.",
-            url: "https://github.com/lvaquin2022300/blog_frontend.git"
-        },
+
         /* {
              img: ["https://static.wixstatic.com/media/128120_009d77598a93491884579eb0502a3a0f~mv2.jpg/v1/fill/w_1000,h_667,al_c,q_85,usm_0.66_1.00_0.01/128120_009d77598a93491884579eb0502a3a0f~mv2.jpg"],
              name: "TonysK Java-MySQL",
@@ -33,7 +29,9 @@ const Cards = () => {
     return (
         <>
             <div className="m-auto px-[2rem] py-8 sm:px-6 lg:px-8 max-w-8xl">
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+
                     {cards.map((card, index) => (
                         <div key={index} className="bg-white shadow-2xl overflow-hidden rounded-lg">
                             <img
@@ -67,6 +65,7 @@ const Cards = () => {
                     ))}
                 </div>
             </div>
+
             {/*Tecnologys */}
             <Skills />
         </>

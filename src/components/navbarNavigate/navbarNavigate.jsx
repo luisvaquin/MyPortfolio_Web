@@ -66,7 +66,7 @@ function NavbarNavigate(props) {
                 className="h-[4.5rem]"
                 sx={{
                     backgroundColor: navBackground,
-                    color: navBackground === 'transparent' ? '#fff' : '#000',
+                    color: navBackground === 'transparent' ? '#fffff' : '#000',
                     transition: 'background-color 0.3s ease',
                     boxShadow: 'none',
                 }}
@@ -83,9 +83,7 @@ function NavbarNavigate(props) {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <div className="text-wrap text-[20px]">
-                        <a href="/">Luis Rodrigo </a>
-                    </div>
+
                     <Typography
                         variant="h6"
                         component="div"
