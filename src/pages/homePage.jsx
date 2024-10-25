@@ -110,6 +110,8 @@ const HomePage = () => {
                             <button onClick={handleOpenPopup} className="flex items-center">
                                 <CallIcon className="text-blue-600" fontSize="large" style={{ fontSize: 35, color: '#FFFFFF' }} />
                             </button>
+                            <PhonePopup isOpen={isPopupOpen} onClose={handleClosePopup} />
+
 
                             {/* Enlace para enviar un correo */}
                             <a href="mailto:luisrodrigo2330@gmail.com">
