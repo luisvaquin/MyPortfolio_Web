@@ -8,8 +8,8 @@ const CarouselCertificate = () => {
     useEffect(() => {
         // URLs de las imágenes
         const imageUrls = [
-            '../public/certiCiscoSegu.jpg',
-            '../public/certificadoPL1.jpg',
+            '/public/certiCiscoSegu.jpg',
+            './public/certificadoPL1.jpg',
             '../public/certiPlatziMarc.jpg',
             '../public/certiCiscoIA.jpg',
             '../public/CertiPL.jpg',
