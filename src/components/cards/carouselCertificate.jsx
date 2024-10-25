@@ -8,13 +8,13 @@ const CarouselCertificate = () => {
     useEffect(() => {
         // URLs de las imágenes
         const imageUrls = [
-            'https://postimg.cc/8JB8bGZ6',
-            'https://postimg.cc/zbRZHWg0',
-            'https://postimg.cc/cK3GrwYT',
-            'https://postimg.cc/Rq4xZ30Q',
-            'https://postimg.cc/7JxFsRRQ',
-            'https://postimg.cc/NLDq9g9h',
-            'https://postimg.cc/sQRdSx4z',
+            'https://i.postimg.cc/zB4J8XW0/certi-Cisco-Segu.jpg',
+            'https://i.postimg.cc/0QV8302R/Certificate-for-Luis-Vaquin-Segurity-page-0001.jpg',
+            'https://i.postimg.cc/6QjWbhQs/certi-Cisco-IA.jpg',
+            'https://i.postimg.cc/KcgGQBSV/certi-Ciber-Platzi.jpg',
+            'https://i.postimg.cc/qMVkFqp7/certi-Platzi.jpg',
+            'https://i.postimg.cc/VvMz6QW1/CertiPL.jpg',
+            'https://i.postimg.cc/4dYJDhKY/certi-Platzi-Marc.jpg',
         ];
 
         // Cargar imágenes
