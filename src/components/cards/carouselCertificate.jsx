@@ -8,13 +8,13 @@ const CarouselCertificate = () => {
     useEffect(() => {
         // URLs de las imágenes
         const imageUrls = [
-            '/public/certiCiscoSegu.jpg',
-            './public/certificadoPL1.jpg',
-            '../public/certiPlatziMarc.jpg',
-            '../public/certiCiscoIA.jpg',
-            '../public/CertiPL.jpg',
-            '../public/certiPlatzi.jpg',
-            '../public/certiCiberPlatzi.jpg',
+            'https://postimg.cc/8JB8bGZ6',
+            'https://postimg.cc/zbRZHWg0',
+            'https://postimg.cc/cK3GrwYT',
+            'https://postimg.cc/Rq4xZ30Q',
+            'https://postimg.cc/7JxFsRRQ',
+            'https://postimg.cc/NLDq9g9h',
+            'https://postimg.cc/sQRdSx4z',
         ];
 
         // Cargar imágenes
