@@ -11,13 +11,7 @@ import handleNavbarScroll from "./srollHandler.js";
 const drawerWidth = 240;
 const navItems = [
     { label: 'Home', path: '/', },
-    { label: 'Sobre Mi', path: '/', },
-    { label: 'Proyectos', path: '/proyects', },
-    { label: 'Skills', path: '/' },
-    { label: 'Soft Skills', path: '/', style: '' },
-    { label: 'Educación', path: '/', style: '' },
-    { label: 'Referencias', path: '/', style: '' },
-    { label: 'Contactame', path: '/', style: '' },
+    { label: 'Proyectos', path: '/proyects', }
 ];
 
 function NavbarNavigate(props) {

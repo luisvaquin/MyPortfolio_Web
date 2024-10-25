@@ -8,6 +8,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import CallIcon from '@mui/icons-material/Call';
 import MarkEmailUnreadIcon from '@mui/icons-material/MarkEmailUnread';
+import PhonePopup from "./PhonePopup.jsx";
 
 const HomePage = () => {
     const textRef = useRef(null); // Referencia al div para el efecto de escritura
@@ -72,6 +73,16 @@ const HomePage = () => {
             homePageRef.current.scrollIntoView({ behavior: "smooth" });
         }
     };
+    const [isPopupOpen, setIsPopupOpen] = useState(false);
+
+    const handleOpenPopup = () => {
+        setIsPopupOpen(true);
+    };
+
+    const handleClosePopup = () => {
+        setIsPopupOpen(false);
+    };
+
 
     return (
         <>
@@ -90,11 +101,20 @@ const HomePage = () => {
                     </div>
                     <div className="mt-[2rem]">
                         <div className="flex gap-5 justify-center">
-                            <LinkedInIcon color="secondary" style={{ fontSize: 35, color: '#FFFFFF' }} />
-                            <InstagramIcon color="secondary" style={{ fontSize: 35, color: '#FFFFFF' }} />
-                            <GitHubIcon color="secondary" style={{ fontSize: 35, color: '#FFFFFF' }} />
-                            <CallIcon color="secondary" style={{ fontSize: 35, color: '#FFFFFF' }} />
-                            <MarkEmailUnreadIcon color="secondary" style={{ fontSize: 35, color: '#FFFFFF' }} />
+                            <a href="https://www.linkedin.com/in/luis-rodrigo-vaquin-624933328" target="_blank" rel="noopener noreferrer">
+                                <LinkedInIcon color="secondary" style={{ fontSize: 35, color: '#FFFFFF' }} />
+                            </a>
+                            <a href="https://github.com/luisvaquin">
+                                <GitHubIcon color="secondary" style={{ fontSize: 35, color: '#FFFFFF' }} />
+                            </a>
+                            <button onClick={handleOpenPopup} className="flex items-center">
+                                <CallIcon className="text-blue-600" fontSize="large" style={{ fontSize: 35, color: '#FFFFFF' }} />
+                            </button>
+
+                            {/* Enlace para enviar un correo */}
+                            <a href="mailto:luisrodrigo2330@gmail.com">
+                                <MarkEmailUnreadIcon color="secondary" style={{ fontSize: 35, color: '#FFFFFF' }} />
+                            </a>
                         </div>
                     </div>
                     <div>
@@ -103,8 +123,14 @@ const HomePage = () => {
                         </span>
                     </div>
                     <div className="flex gap-[2rem] justify-center max-[1000px]:gap-[15px] mt-[2rem] max-[1000px]:mt-[1.5rem]">
-                        <Button variant="outlined" size="medium" className="animate-pulse" href="https://tailwindcss.com/docs/flex-direction">DESCARGA MI CV</Button>
-                        <Button variant="outlined" size="medium">VER PROYECTOS</Button>
+                        <a href="/CV-LuisVaquin.pdf" download>
+                            <Button variant="outlined" size="medium" className="animate-pulse">
+                                DESCARGA MI CV
+                            </Button>
+                        </a>
+                        <a href="/proyects">
+                            <Button variant="outlined" size="medium">VER PROYECTOS</Button>
+                        </a>
                     </div>
                 </div>
             </div>
