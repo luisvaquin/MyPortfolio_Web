@@ -1,116 +1,95 @@
 import React, { useState, useEffect } from 'react';
-import { SkillsBlond } from '../skills/skills-blond';
 
 const CarouselCertificate = () => {
-    const [images, setImages] = useState([]);
-    const [currentSlide, setCurrentSlide] = useState(0);
+  const [images, setImages] = useState([]);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
-    useEffect(() => {
-        // URLs de las imágenes
-        const imageUrls = [
-            'https://i.postimg.cc/zB4J8XW0/certi-Cisco-Segu.jpg',
-            'https://i.postimg.cc/0QV8302R/Certificate-for-Luis-Vaquin-Segurity-page-0001.jpg',
-            'https://i.postimg.cc/6QjWbhQs/certi-Cisco-IA.jpg',
-            'https://i.postimg.cc/KcgGQBSV/certi-Ciber-Platzi.jpg',
-            'https://i.postimg.cc/qMVkFqp7/certi-Platzi.jpg',
-            'https://i.postimg.cc/VvMz6QW1/CertiPL.jpg',
-            'https://i.postimg.cc/4dYJDhKY/certi-Platzi-Marc.jpg',
-        ];
+  useEffect(() => {
+    const imageUrls = [
+      'https://i.postimg.cc/zB4J8XW0/certi-Cisco-Segu.jpg',
+      'https://i.postimg.cc/0QV8302R/Certificate-for-Luis-Vaquin-Segurity-page-0001.jpg',
+      'https://i.postimg.cc/6QjWbhQs/certi-Cisco-IA.jpg',
+      'https://i.postimg.cc/KcgGQBSV/certi-Ciber-Platzi.jpg',
+      'https://i.postimg.cc/qMVkFqp7/certi-Platzi.jpg',
+      'https://i.postimg.cc/VvMz6QW1/CertiPL.jpg',
+      'https://i.postimg.cc/4dYJDhKY/certi-Platzi-Marc.jpg',
+      'https://i.ibb.co/jkFPgDPB/Luis-Rodrigo-Vaquin-Bacajol-1-1-page-0001.jpg'
+    ];
 
-        // Cargar imágenes
-        const loadImage = (url) => {
-            return new Promise((resolve, reject) => {
-                const img = new Image();
-                img.src = url;
-                img.onload = () => resolve(url);
-                img.onerror = () => reject(url);
-            });
-        };
+    Promise.all(
+      imageUrls.map(
+        (url) =>
+          new Promise((resolve, reject) => {
+            const img = new Image();
+            img.src = url;
+            img.onload = () => resolve(url);
+            img.onerror = () => reject(url);
+          })
+      )
+    )
+      .then(setImages)
+      .catch((err) => console.error('Error loading images:', err));
+  }, []);
 
-        // Verificar que todas las imágenes se hayan cargado correctamente
-        Promise.all(imageUrls.map((url) => loadImage(url)))
-            .then((loadedImages) => {
-                setImages(loadedImages);
-            })
-            .catch((err) => {
-                console.error('Error loading images:', err);
-            });
-    }, []);
+  const goToSlide = (index) => setCurrentSlide(index);
+  const goToPrevSlide = () =>
+    setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  const goToNextSlide = () =>
+    setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
 
-    const goToSlide = (index) => {
-        setCurrentSlide(index);
-    };
+  return (
+    <div className="relative mx-auto max-w-5xl px-4 py-8">
+      {/* Carrusel de imágenes */}
+      <div className="relative overflow-hidden rounded-xl shadow-xl">
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className={`transition-opacity duration-700 ease-in-out ${
+              index === currentSlide ? 'opacity-100' : 'opacity-0 absolute inset-0'
+            }`}
+          >
+            <img
+              src={image}
+              alt={`Slide ${index + 1}`}
+              className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-contain rounded-xl bg-black"
+            />
+          </div>
+        ))}
 
-    const goToPrevSlide = () => {
-        setCurrentSlide((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-    };
+        {/* Botones de navegación */}
+        <button
+          onClick={goToPrevSlide}
+          className="absolute left-4 top-1/2 -translate-y-1/2 z-10 bg-white bg-opacity-60 hover:bg-opacity-80 p-2 rounded-full shadow-md transition"
+        >
+          <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
 
-    const goToNextSlide = () => {
-        setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-    };
+        <button
+          onClick={goToNextSlide}
+          className="absolute right-4 top-1/2 -translate-y-1/2 z-10 bg-white bg-opacity-60 hover:bg-opacity-80 p-2 rounded-full shadow-md transition"
+        >
+          <svg className="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
 
-    return (
-        <>
-            <div id="carouselExampleCaptions" className="relative max-w-screen-xl lg:max-w-screen-2xl mx-auto px-4 lg:px-12">
-                {/* Indicadores */}
-                <div className="absolute bottom-0 left-0 right-0 z-2 mx-auto mb-4 flex list-none justify-center p-0 space-x-2">
-                    {images.map((_, index) => (
-                        <button
-                            key={index}
-                            type="button"
-                            className={`h-2 w-8 cursor-pointer rounded-full bg-white opacity-50 transition-opacity duration-300 ease-in-out ${index === currentSlide ? 'opacity-100' : ''
-                                }`}
-                            aria-label={`Slide ${index + 1}`}
-                            onClick={() => goToSlide(index)}
-                        />
-                    ))}
-                </div>
-
-                {/* Imágenes del carrusel */}
-                <div className="relative w-full overflow-hidden">
-                    {images.map((image, index) => (
-                        <div
-                            key={index}
-                            className={`relative w-full transition-transform duration-500 ease-in-out ${index === currentSlide ? '' : 'hidden'
-                                }`}
-                        >
-                            <div className="relative overflow-hidden bg-cover bg-no-repeat">
-                                <img
-                                    src={image}
-                                    className="block w-full object-contain h-64 sm:h-80 lg:h-[600px] mx-auto"
-                                    alt={`Slide ${index + 1}`}
-                                />
-                            </div>
-                        </div>
-                    ))}
-                </div>
-
-                {/* Controles de navegación */}
-
-                <button
-                    className="absolute top-1/2 left-0 z-10 flex h-10 w-10 items-center justify-center bg-gray-700 bg-opacity-50 hover:bg-opacity-80 focus:bg-opacity-80 text-white rounded-full transform -translate-y-1/2"
-                    type="button"
-                    onClick={goToPrevSlide}
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-                    </svg>
-                    <span className="sr-only">Previous</span>
-                </button>
-                <button
-                    className="absolute top-1/2 right-0 z-10 flex h-10 w-10 items-center justify-center bg-gray-700 bg-opacity-50 hover:bg-opacity-80 focus:bg-opacity-80 text-white rounded-full transform -translate-y-1/2"
-                    type="button"
-                    onClick={goToNextSlide}
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6">
-                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                    </svg>
-                    <span className="sr-only">Next</span>
-                </button>
-            </div>
-
-        </>
-    );
+      {/* Indicadores (dots) */}
+      <div className="flex justify-center space-x-2 mt-4">
+        {images.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`h-3 w-3 rounded-full transition-all duration-300 ${
+              index === currentSlide ? 'bg-blue-500 w-6' : 'bg-gray-300'
+            }`}
+          />
+        ))}
+      </div>
+    </div>
+  );
 };
 
 export default CarouselCertificate;

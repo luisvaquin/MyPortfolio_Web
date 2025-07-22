@@ -11,8 +11,7 @@ const IconEducation = () => {
 
 const SectionEducation = () => {
     return (
-        <>
-            <section className="text-white bg-[#161513] body-font mt-[-1rem]">
+        <> {/**   <section className="text-white bg-[#161513] body-font mt-[-1rem]">
                 <div className="container px-5 py-24 mx-auto">
                     <h2 className="text-3xl mb-6 text-center sm:text-4xl lg:text-5xl font-extrabold text-white">Education</h2>
 
@@ -47,7 +46,8 @@ const SectionEducation = () => {
 
                     </div>
                 </div>
-            </section>
+            </section>*/}
+
 
             <CarouselCertificate />
         </>

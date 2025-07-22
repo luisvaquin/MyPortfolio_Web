@@ -5,15 +5,25 @@ import CarouselCertificate from './carouselCertificate';
 const Cards = () => {
     const cards = [
         {
+            img: ["https://lemon.io/wp-content/uploads/2023/02/Artboard-15-980x536-optim.jpg"],
+            name: "Frelance Goo Admin,  <br /> Presa Libre",
+            description: "Desde el presente año he tenido la oportunidad de trabajar como digitardor de datos, de igual manera siendo responsable de supervisar que distintos procesos se cumplan correctamente y de analizar reportes de los mismos",
+        }, {
+            img: ["https://www.shutterstock.com/image-photo/hands-typing-on-laptop-programming-600nw-2480023489.jpg"],
+            name: "JR DEVELOPER WEB",
+            description: "Además, me desempeño como desarrollador de páginas web, creando soluciones digitalesadaptadas a distintas necesidades.",
+        },
+        {
             img: ["https://www.prensalibre.com/wp-content/uploads/2024/04/goo-the-data-1.jpg?quality=52"],
-            name: "GOO-ADMIN",
+            name: "FRELANCE - GOO Admin",
             description: `Tuve la oportunidad de poder desarrollar parte de la plataforma administrativa de  <a href="https://www.goo.live/" target="_blank" rel="noopener noreferrer" class="text-green-600 hover:text-blue-700 underline text-[1.1rem] font-bold">GOO</a> plataforma DATASINCE con diferentes tecnologías y servicios como: AWS, SQL, React, Node, MaterialUI y Tailwind.
             Puedes ver el proyecto aquí: <a href="https://www.goo.live/" target="_blank" rel="noopener noreferrer" class="text-blue-900 hover:text-blue-700 underline text-[1.1rem] font-bold">GOO-Admin</a>.`,
             url: "https://github.com/tecmart/goo-admin.git"
         },
+
         {
             img: ["https://info.ibabs.com/hubfs/3.%20iBabs/Core%20design%20files/ibabs-templates-cover-board-meeting-agenda%20(1).png"],
-            name: "Agenda Web",
+            name: "JUNIOR WEB DEVELOPER",
             description: "Para el desarrollo de esta agenda web utilicé tecnologías básicas como HTML, CSS y JavaScript.",
             url: "https://github.com/lvaquin2022300/Agenda_Web.git"
         },
@@ -29,6 +39,9 @@ const Cards = () => {
     return (
         <>
             <div className="m-auto px-[2rem] py-8 sm:px-6 lg:px-8 max-w-8xl">
+                <div>
+                    
+                </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
 
@@ -56,7 +69,7 @@ const Cards = () => {
                                             rel="noopener noreferrer"
                                             className="text-blue-600 hover:text-blue-800 font-medium hover:underline"
                                         >
-                                            VER CÓDIGO
+                                            VER PROYECTO
                                         </a>
                                     </div>
                                 )}

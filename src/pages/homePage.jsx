@@ -9,6 +9,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import CallIcon from '@mui/icons-material/Call';
 import MarkEmailUnreadIcon from '@mui/icons-material/MarkEmailUnread';
 import PhonePopup from "./PhonePopup.jsx";
+import FindInPageIcon from '@mui/icons-material/FindInPage';
+import AboutMeR from "./aboutMeR.jsx";
 
 const HomePage = () => {
     const textRef = useRef(null); // Referencia al div para el efecto de escritura
@@ -86,21 +88,26 @@ const HomePage = () => {
 
     return (
         <>
-            <NavbarNavigate />
+
             <div
                 className="flex flex-col justify-center items-center min-h-screen bg-[#161513]"
                 id="idHomePage"
                 ref={homePageRef} // Referencia al inicio de la página
             >
                 <div className="mx-auto text-center mt-[2rem] sm:mt-[3rem]">
-                    <div className="mx-auto mb-6 sm:mb-8 h-[12rem] sm:h-[14rem] w-[12rem] sm:w-[14rem] overflow-hidden rounded-full bg-gradient-to-tr from-[#0E3386] to-[#00CED1]">
-                        <img src="/iconLr1.png" alt="" className="h-[100%] w-[17rem] object-cover" />
+                    <div className="mx-auto mb-6 sm:mb-8 h-[17rem] sm:h-[20rem] w-[17rem] sm:w-[20rem] overflow-hidden rounded-full bg-gradient-to-tr from-[#0E3386] to-[#00CED1]">
+                        <img src="/iconLr1.png" alt="" className="h-[100%] w-[23rem] object-cover" />
                     </div>
                     <div>
                         <h1 ref={textRef} className="max-w-screen-md text-[2rem] sm:text-4xl lg:text-5xl font-extrabold text-white mb-4 sm:mb-6"></h1>
                     </div>
-                    <div className="mt-[2rem]">
-                        <div className="flex gap-5 justify-center">
+                    <div>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-tr from-[#00CED1] to-[#0E3386] text-[1.9em] sm:text-4xl lg:text-5xl font-extrabold mt-[-1rem] p-[1.5rem]">
+                            Computer Technician
+                        </span>
+                    </div>
+                    <div className="mt-[1.5rem]">
+                        <div className="flex gap-[2rem] justify-center">
                             <a href="https://www.linkedin.com/in/luis-rodrigo-vaquin-624933328" target="_blank" rel="noopener noreferrer">
                                 <LinkedInIcon color="secondary" style={{ fontSize: 35, color: '#FFFFFF' }} />
                             </a>
@@ -111,29 +118,16 @@ const HomePage = () => {
                                 <CallIcon className="text-blue-600" fontSize="large" style={{ fontSize: 35, color: '#FFFFFF' }} />
                             </button>
                             <PhonePopup isOpen={isPopupOpen} onClose={handleClosePopup} />
-
-
                             {/* Enlace para enviar un correo */}
                             <a href="mailto:luisrodrigo2330@gmail.com">
                                 <MarkEmailUnreadIcon color="secondary" style={{ fontSize: 35, color: '#FFFFFF' }} />
                             </a>
+                            <FindInPageIcon color="secondary" style={{ fontSize: 35, color: '#FFFFFF' }} />
+
                         </div>
                     </div>
-                    <div>
-                        <span className="text-transparent bg-clip-text bg-gradient-to-tr from-[#00CED1] to-[#0E3386] animate-wave text-[1.9em] sm:text-4xl lg:text-5xl font-extrabold mt-[1.7rem]">
-                            Frontend Developer
-                        </span>
-                    </div>
-                    <div className="flex gap-[2rem] justify-center max-[1000px]:gap-[15px] mt-[2rem] max-[1000px]:mt-[1.5rem]">
-                        <a href="/CV-LuisVaquin.pdf" download>
-                            <Button variant="outlined" size="medium" className="animate-pulse">
-                                DESCARGA MI CV
-                            </Button>
-                        </a>
-                        <a href="/proyects">
-                            <Button variant="outlined" size="medium">VER PROYECTOS</Button>
-                        </a>
-                    </div>
+
+
                 </div>
             </div>
 
@@ -153,7 +147,7 @@ const HomePage = () => {
                     </div>
                 </div>
             )}
-            <AboutMe />
+            <AboutMeR/>
         </>
     );
 };

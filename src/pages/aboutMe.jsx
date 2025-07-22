@@ -28,22 +28,18 @@ const AboutMe = () => {
 
     return (
         <>
-            <section id="aboutMe" className="sm:p-10 lg:p-20 p-5 aboutMe">
+            {/*<section id="aboutMe" className="sm:p-10 lg:p-20 p-5 aboutMe">
                 <div className="container mx-auto mt-[1rem]">
                     <div className="sm:grid grid-cols-2 max-[1250px]:grid-cols-1">
                         <div className="sm:p-10 p-5 bg-white sm:me-5 mb-10 rounded-md shadow-md h-[auto] ">
                             <h3 className="text-2xl mb-5 font-bold">Un poco sobre mí</h3>
                             <p className="leading-10 text-gray-500 text-2xl max-[750px]:text-[17px]">
-                                ¡Hola! Soy Luis Rodrigo Vaquin, actualmente tengo 18 años de edad y soy un apasionado
-                                de la tecnología. <br /> <br /> Desde pequeño, me ha fascinado aprender
-                                constantemente y descubrir cómo funcionan las cosas.
-                                Me considero un joven autodidacta, creativo y entusiasta,
-                                siempre buscando nuevas formas de aprender y mejorar día con día.
+                                Soy Perito Técnico en Informática y actualmente estudiante de la carrera de Ingeniería en Sistemas.Cuento con certificaciones en distintas áreas de recursos informáticos, así cuento con una breveexperiencia en proyectos de desarrollo y análisis de datos.
                             </p>
                         </div>
                     </div>
                 </div>
-            </section>
+            </section>*/}
 
             <div className="relative w-full h-[50vh] bg-fixed bg-cover bg-center mt-[-2rem]"
                 style={{
@@ -53,7 +49,7 @@ const AboutMe = () => {
                 <div className="relative p-[3rem] min-[1200px]:p-[12rem] text-center max-[1000px]:pt-[4.5rem] "></div>
             </div>
 
-            <Cards />
+
         </>
     );
 };
