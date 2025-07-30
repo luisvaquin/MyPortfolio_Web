@@ -26,7 +26,7 @@ const AboutMeR = () => {
                     <div className="max-w-[90%] sm:max-w-[85%] lg:max-w-[70%] mx-auto sm:mt-[6rem] mt-4">
                         <p className="text-[1rem] sm:text-[1.25rem] lg:text-[1.5rem] leading-relaxed text-justify sm:mt-[0.5rem]">
                             ¡Hola! 👋🏻 Mi nombre es <strong>Luis Rodrigo Vaquin</strong>, soy Perito Técnico en Informática y actualmente estudiante de la carrera de Ingeniería en Sistemas.
-                            soy un apasionado de la tecnología y el desarrollo de software, con experiencia en proyectos de desarrollo y análisis de datos.
+                            soy un apasionado de la tecnología y el desarrollo de software, breve experiencia en proyectos de desarrollo y análisis de datos.
                         </p>
 
                         {/* Esta imagen solo se verá en móviles */}
