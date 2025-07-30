@@ -103,7 +103,11 @@ const HomePage = () => {
                     </div>
                     <div>
                         <span className="text-transparent bg-clip-text bg-gradient-to-tr from-[#00CED1] to-[#0E3386] text-[1.9em] sm:text-4xl lg:text-5xl font-extrabold mt-[-1rem] p-[1.5rem]">
-                            Computer Technician
+                            Computer Technician <br />
+
+                        </span>
+                        <span className="text-transparent bg-clip-text bg-gradient-to-tr from-[#00CED1] to-[#0E3386] text-[1.9em] sm:text-4xl lg:text-5xl font-extrabold mt-[-1rem] p-[1.5rem]">
+                            Engineering student
                         </span>
                     </div>
                     <div className="mt-[1.5rem]">
@@ -147,7 +151,7 @@ const HomePage = () => {
                     </div>
                 </div>
             )}
-            <AboutMeR/>
+            <AboutMeR />
         </>
     );
 };

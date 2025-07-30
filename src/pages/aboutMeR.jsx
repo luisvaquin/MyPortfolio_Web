@@ -5,6 +5,7 @@ import 'animate.css';
 import '../index.css';
 import SectionEducation from './section-education';
 import svgAvatar from "/src/assets/icon3.svg"
+import CardsProjects from '@/components/cards/cardsProjects';
 
 
 const AboutMeR = () => {
@@ -13,26 +14,26 @@ const AboutMeR = () => {
             <div className='h-[100vh] flex flex-col sm:flex-row bg-[#161513] text-white'>
 
                 {/* Lado izquierdo: texto centrado con justificación */}
-                <div className='w-full sm:w-1/2 p-[1rem] flex flex-col justify-center items-center mt-4 animate__zoomIn appear'>
+                <div className='w-full sm:w-1/2 p-[1rem] flex flex-col justify-center items-center mt-[1rem] animate__zoomIn appear'>
 
                     {/* Título principal */}
                     <h1
-                        className="text-[2rem] sm:text-4xl lg:text-5xl font-extrabold mb-4 text-center"
+                        className="text-[1.2rem] sm:text-4xl lg:text-5xl font-extrabold mb-4 text-center"
                     >
-                        Un poco sobre mí
+                        ¡Hola! 👋🏻 Un gusto conocerte.
                     </h1>
 
                     {/* Párrafo de presentación centrado y justificado */}
                     {/* Párrafo de presentación centrado y justificado */}
                     <div className="max-w-[90%] sm:max-w-[85%] lg:max-w-[70%] mx-auto sm:mt-[6rem] mt-4">
                         <p className="text-[1rem] sm:text-[1.25rem] lg:text-[1.5rem] leading-relaxed text-justify sm:mt-[0.5rem]">
-                            ¡Hola! 👋🏻 Mi nombre es <strong>Luis Rodrigo Vaquin</strong>, soy Perito Técnico en Informática y actualmente estudiante de la carrera de Ingeniería en Sistemas.
-                            soy un apasionado de la tecnología y el desarrollo de software, breve experiencia en proyectos de desarrollo y análisis de datos.
+                            Mi nombre es Luis Rodrigo Vaquin, Técnico en Informática y estudiante de Ingeniería en Sistemas.
+                            un apasionado de la tecnología y a procesos tecnicos, como automatizaciones, cuento con breve experiencia en proyectos de desarrollo de sorftware y análisis de datos.
                         </p>
 
                         {/* Esta imagen solo se verá en móviles */}
                         <img
-                            className="block sm:hidden w-auto h-auto rounded-md mx-auto my-10 animate-wave mt-[5rem]"
+                            className="block sm:hidden w-auto h-auto rounded-md mx-auto my-10 animate-wave mt-[5rem] appear"
                             src={svgAvatar}
                             alt="Graphic Design"
                             id="routeProyects"
@@ -49,8 +50,9 @@ const AboutMeR = () => {
                     </div>
                 </div>
             </div>
+            <CardsProjects />
             <AboutMe />
-            <SectionEducation/>
+            <SectionEducation />
         </>
     );
 };
