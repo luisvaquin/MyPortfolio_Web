@@ -44,7 +44,7 @@ const AboutMeR = () => {
 
                     <div className="mt-[1rem] max-[1000px]:mt-[-5rem]" id="">
                         <img className="w-[auto] h-[auto] rounded-md mx-[auto] my-[auto]
-                         max-[650px]:my-[5rem] animate-wave appear" src="/src/assets/icon3.svg" alt="Graphic Design" id="routeProyects" />
+                         max-[650px]:my-[5rem] animate-wave appear" src="./src/assets/icon3.svg" alt="Graphic Design" id="routeProyects" />
                     </div>
                 </div>
             </div>
