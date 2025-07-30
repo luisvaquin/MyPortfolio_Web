@@ -4,6 +4,7 @@ import SectionExperience from './sectionExperience';
 import 'animate.css';
 import '../index.css';
 import SectionEducation from './section-education';
+import svgAvatar from "/src/assets/icon3.svg"
 
 
 const AboutMeR = () => {
@@ -32,7 +33,7 @@ const AboutMeR = () => {
                         {/* Esta imagen solo se verá en móviles */}
                         <img
                             className="block sm:hidden w-auto h-auto rounded-md mx-auto my-10 animate-wave mt-[5rem]"
-                            src="../src/assets/icon3.svg"
+                            src={svgAvatar}
                             alt="Graphic Design"
                             id="routeProyects"
                         />
@@ -44,7 +45,7 @@ const AboutMeR = () => {
 
                     <div className="mt-[1rem] max-[1000px]:mt-[-5rem]" id="">
                         <img className="w-[auto] h-[auto] rounded-md mx-[auto] my-[auto]
-                         max-[650px]:my-[5rem] animate-wave appear" src="../src/assets/icon3.svg" alt="Graphic Design" id="routeProyects" />
+                         max-[650px]:my-[5rem] animate-wave appear" src={svgAvatar} alt="Graphic Design" id="routeProyects" />
                     </div>
                 </div>
             </div>
